@@ -2,6 +2,7 @@
 ***目标：实现类似前端打包一样的配置，与git分支做匹配，自动化部署环境，同时提供接口支持应用内切换环境***
 
 ***注意配置好之后，需要Clean一遍项目,不然会报错GitCommitBranch不存在***
+
 ####在项目中获取git信息
 1. 在Info.plist增加GitCommitBranch（名字自定，表达清晰即可）项，用于记录分支名称
 2. 在 Xcode(TARGETS项目target) - Build Phases - New Run Script Phase，增加脚本配置，用于获取git信息并更新到Info.plist中, 脚本代码如下
