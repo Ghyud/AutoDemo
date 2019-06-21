@@ -18,6 +18,6 @@ info_plist="${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Info.plist"
 
 ```
 
-###创建配置文件，实现API环境自动部署
+创建配置文件，实现API环境自动部署
 创建AutoConfig单例，实现自动化部署逻辑，提供一切受环境影响的接口供外部调用即可
 
