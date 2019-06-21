@@ -13,6 +13,7 @@
 		635AC11A22BC706000DB3594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635AC11922BC706000DB3594 /* Assets.xcassets */; };
 		635AC11D22BC706000DB3594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635AC11B22BC706000DB3594 /* LaunchScreen.storyboard */; };
 		635AC12022BC706000DB3594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 635AC11F22BC706000DB3594 /* main.m */; };
+		635AC12822BC7C5200DB3594 /* AutoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 635AC12722BC7C5200DB3594 /* AutoConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		635AC11C22BC706000DB3594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635AC11E22BC706000DB3594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635AC11F22BC706000DB3594 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		635AC12622BC7C5200DB3594 /* AutoConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoConfig.h; sourceTree = "<group>"; };
+		635AC12722BC7C5200DB3594 /* AutoConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				635AC11B22BC706000DB3594 /* LaunchScreen.storyboard */,
 				635AC11E22BC706000DB3594 /* Info.plist */,
 				635AC11F22BC706000DB3594 /* main.m */,
+				635AC12622BC7C5200DB3594 /* AutoConfig.h */,
+				635AC12722BC7C5200DB3594 /* AutoConfig.m */,
 			);
 			path = AutoDemo;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			files = (
 				635AC11522BC705E00DB3594 /* ViewController.m in Sources */,
 				635AC12022BC706000DB3594 /* main.m in Sources */,
+				635AC12822BC7C5200DB3594 /* AutoConfig.m in Sources */,
 				635AC11222BC705E00DB3594 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
