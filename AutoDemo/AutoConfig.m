@@ -34,6 +34,7 @@ const static NSString *kProductionRegx = @"^production";
 
 + (void)setEnviroment:(AutoEnvironmentType)env {
     [AutoConfig shared].env = env;
+    [[AutoConfig shared] updateConfig];
 }
 
 #pragma mark -life cycle
