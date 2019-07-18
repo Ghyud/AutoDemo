@@ -63,9 +63,9 @@ fi
 ipaName="`date +%Y%m%d%-H:%m:%s`" 
 echo "安装包名称:${ipaName}" >>$logPath
 
-echo "开始打包$projectName.xcarchive成$projectName.ipa....." >>$logPath
+echo "开始打包$projectName.xcarchive成ipa....." >>$logPath
 
-xcodebuild -exportArchive -archivePath ${buildAppToDir}/${projectName}.xcarchive -exportPath ${buildAppToDir}/${ipaName}.ipa -exportOptionsPlist ${exportOptionsPlistPath} -allowProvisioningUpdates
+xcodebuild -exportArchive -archivePath ${buildAppToDir}/${projectName}.xcarchive -exportPath ${buildAppToDir}/${ipaName} -exportOptionsPlist ${exportOptionsPlistPath} -allowProvisioningUpdates
 
 if test $? -eq 0
 then
