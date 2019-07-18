@@ -159,7 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#当前的分支\ngit_branch=$(git symbolic-ref --short -q HEAD)\n\n#获取App安装包下的info.plist文件路径\ninfo_plist=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Info.plist\"\n\n#利用PlistBuddy改变info.plist的值\n/usr/libexec/PlistBuddy -c \"Set :'GitCommitBranch'    '${git_branch}'\"                 \"${info_plist}\"\n";
+			shellScript = "#当前的分支\ngit_branch=$(git symbolic-ref --short -q HEAD)\n\n#获取App安装包下的info.plist文件路径\ninfo_plist=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Info.plist\"\n\n#利用PlistBuddy改变info.plist的值\n#如果git_branch有值，则修改info.plist，在jenkins拉取的项目中，git_branch是没有值，这里就不进行修改操作\nif [ ${git_branch} ]\nthen\n\n/usr/libexec/PlistBuddy -c \"Set :'GitCommitBranch'    '${git_branch}'\"                 \"${info_plist}\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

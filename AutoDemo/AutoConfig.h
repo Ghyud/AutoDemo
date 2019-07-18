@@ -22,6 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)baseURL;
 
 /**
+ 当前环境
+
+ @return 当前环境
+ */
++ (AutoEnvironmentType)currentEnv;
+
+/**
  自定义环境，一步实现应用内环境切换 及 方便开发调试
 
  @param env 要切换到的环境

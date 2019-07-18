@@ -32,6 +32,10 @@ const static NSString *kProductionRegx = @"^production";
     return [AutoConfig shared].baseURL;
 }
 
++ (AutoEnvironmentType)currentEnv {
+    return [AutoConfig shared].env;
+}
+
 + (void)setEnviroment:(AutoEnvironmentType)env {
     [AutoConfig shared].env = env;
     [[AutoConfig shared] updateConfig];
@@ -55,7 +59,8 @@ const static NSString *kProductionRegx = @"^production";
     _developPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", kDevelopRegx];
     _stagingPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",kStagingRegx];
     _productionPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",kProductionRegx];
-
+    _env = AutoEnvironmentTypeDevelop;
+    
     [self envForCurrentBranch];
     [self updateConfig];
 }
@@ -75,7 +80,7 @@ const static NSString *kProductionRegx = @"^production";
         //预发布
         self.env = AutoEnvironmentTypeStaging;
     }
-    else {
+    else if ([self.productionPredicate evaluateWithObject:branch]) {
         //生产环境
         self.env = AutoEnvironmentTypeProduction;
     }
